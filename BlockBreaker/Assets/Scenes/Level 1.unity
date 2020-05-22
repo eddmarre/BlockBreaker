@@ -5093,10 +5093,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8148659954519947730, guid: a89abe78364cf5f419cbe731a0323a16,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8148659954699810663, guid: a89abe78364cf5f419cbe731a0323a16,
         type: 3}
       propertyPath: m_Name
       value: Game Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8148659954699810663, guid: a89abe78364cf5f419cbe731a0323a16,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8148659954699810667, guid: a89abe78364cf5f419cbe731a0323a16,
         type: 3}

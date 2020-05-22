@@ -8,7 +8,7 @@ public class Block : MonoBehaviour
     {
         if (other.gameObject.name == "ball")
         {
-            Debug.Log("hit by " + other.gameObject.name);
+            //Debug.Log("hit by " + other.gameObject.name);
             Destroy(gameObject);
         }
 
