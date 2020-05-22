@@ -14,8 +14,9 @@ public class Block : MonoBehaviour
         level.CountBreakableBlocks();
     }
 
-    private void Update() {
-        if(Debug.isDebugBuild)
+    private void Update()
+    {
+        if (Debug.isDebugBuild)
         {
             DebugBinds();
         }
@@ -42,6 +43,7 @@ public class Block : MonoBehaviour
 
     private void DestroyBlock()
     {
+        FindObjectOfType<GameStatus>().AddToScore();
         AudioSource.PlayClipAtPoint(breakSound, Camera.main.transform.position);
         level.BlockDestroyed();
         Destroy(gameObject);
