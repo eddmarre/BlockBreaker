@@ -6,7 +6,9 @@ public class Block : MonoBehaviour
 {
     [SerializeField] GameObject blockSparklesVFX;
     [SerializeField] AudioClip breakSound;
+    [SerializeField] int maxHits;
     Level level;
+    int timesHit;
 
     private void Start()
     {
@@ -44,13 +46,20 @@ public class Block : MonoBehaviour
     {
         if (other.gameObject.name == "ball")
         {
-            if (tag == "Breakable")
-            {
-                DestroyBlock();
-            }
+            HandleHit();
 
         }
 
+    }
+
+    private void HandleHit()
+    {
+        timesHit++;
+        if (tag == "Breakable")
+        {
+
+            if (timesHit >= maxHits) DestroyBlock();
+        }
     }
 
     private void DestroyBlock()
