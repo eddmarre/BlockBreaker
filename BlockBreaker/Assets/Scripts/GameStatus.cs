@@ -11,6 +11,20 @@ public class GameStatus : MonoBehaviour
     [SerializeField] TextMeshProUGUI scoreText;
 
     int currentScore = 0;
+
+    private void Awake()
+    {
+        //singleton pattern
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
     private void Start()
     {
         scoreText.text = currentScore.ToString();
