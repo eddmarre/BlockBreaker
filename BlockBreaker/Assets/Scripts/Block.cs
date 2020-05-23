@@ -10,8 +10,17 @@ public class Block : MonoBehaviour
 
     private void Start()
     {
+        CountBreakableBlocks();
+
+    }
+
+    private void CountBreakableBlocks()
+    {
         level = FindObjectOfType<Level>();
-        level.CountBreakableBlocks();
+        if (tag == "Breakable")
+        {
+            level.CountBlocks();
+        }
     }
 
     private void Update()
@@ -35,8 +44,11 @@ public class Block : MonoBehaviour
     {
         if (other.gameObject.name == "ball")
         {
-            //Debug.Log("hit by " + other.gameObject.name);
-            DestroyBlock();
+            if (tag == "Breakable")
+            {
+                DestroyBlock();
+            }
+
         }
 
     }
