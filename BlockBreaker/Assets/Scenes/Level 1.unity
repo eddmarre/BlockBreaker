@@ -5236,11 +5236,6 @@ PrefabInstance:
       propertyPath: paddle
       value: 
       objectReference: {fileID: 732011062}
-    - target: {fileID: 632534564692233725, guid: 347266fe16617e94cbdc1515c39b13d2,
-        type: 3}
-      propertyPath: randomFactor
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 347266fe16617e94cbdc1515c39b13d2, type: 3}
 --- !u!1001 &2090525414640077298
@@ -5319,6 +5314,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2005805603060582700, guid: 4a88f3e565f550f42a398f4fb448d5c2,
+        type: 3}
+      propertyPath: isAutoPlayEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2991443214296637474, guid: 4a88f3e565f550f42a398f4fb448d5c2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5327,7 +5327,7 @@ PrefabInstance:
     - target: {fileID: 4084030525481570941, guid: 4a88f3e565f550f42a398f4fb448d5c2,
         type: 3}
       propertyPath: m_Name
-      value: GameStatus
+      value: GameSession
       objectReference: {fileID: 0}
     - target: {fileID: 4622908421287974163, guid: 4a88f3e565f550f42a398f4fb448d5c2,
         type: 3}
